@@ -1,8 +1,8 @@
 from django.contrib.auth.password_validation import validate_password
 from django.core.exceptions import ValidationError, ObjectDoesNotExist
-from django.core.validators import EmailValidator, validate_email
+from django.core.validators import validate_email
 from django.db import IntegrityError
-from graphene import relay, ObjectType, Mutation, String, ID
+from graphene import relay, Mutation, String, ID
 from graphene_django import DjangoObjectType
 from graphene_django.fields import DjangoListField
 from graphene_django.filter import DjangoFilterConnectionField
@@ -114,9 +114,7 @@ class UserUpdateMutation(Mutation):
 
     updated_user = DjangoListField(UserNode)
 
-    def mutate(self, info, id, email, password, **kwargs
-               # username, first_name, last_name
-               ):
+    def mutate(self, info, id, email, password, **kwargs):
         try:
             # get a user which is not a superadmin
             user = User.objects.get(id=id, is_superuser=False)

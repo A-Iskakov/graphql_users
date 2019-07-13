@@ -1,0 +1,7 @@
+django
+Faker
+psycopg2-binary
+graphene-django
+
+
+django-filter

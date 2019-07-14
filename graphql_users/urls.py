@@ -21,7 +21,7 @@ from graphene_django.views import GraphQLView
 urlpatterns = [
     path('admin/', admin.site.urls),
     # if production switch off  GraphiQL API browser
-    path('graphql', GraphQLView.as_view(
+    path('graphql/', GraphQLView.as_view(
         graphiql=settings.DEBUG
     )
          ),

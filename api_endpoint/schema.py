@@ -15,7 +15,7 @@ SEARCH_FILTERS = ['exact', 'icontains', 'istartswith']
 
 class DjangoNode(relay.Node):
     """
-    This class removes base64 unique ids and operates with plain Integer IDs
+    This class removes base64 unique ids and operates with plain Integer ID
     """
 
     @classmethod

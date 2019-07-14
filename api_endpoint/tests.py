@@ -17,7 +17,6 @@ def create_initial_fake_data():
 
 
 class UsersTestCase(GraphQLTestCase):
-    # Here you need to inject your test case's schema
     GRAPHQL_SCHEMA = schema
 
     def setUp(self):

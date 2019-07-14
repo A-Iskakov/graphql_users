@@ -9,6 +9,8 @@ About
 
 See ``requirements.txt`` for installed packages and the used versions.
 
+Tests cover ~80% of the code
+
 Example guide based on Ubuntu 18.04 installation
 
 Installing PostgreSQL 11

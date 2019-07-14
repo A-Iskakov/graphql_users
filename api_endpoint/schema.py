@@ -99,7 +99,7 @@ class UserCreateMutation(Mutation):
 
 class UserUpdateMutation(Mutation):
     """
-              This class updates exciting users
+              This class updates exciting users by ID
               """
 
     class Arguments:
@@ -129,7 +129,7 @@ class UserUpdateMutation(Mutation):
                 validate_email(email)
                 user.email = email
 
-            # set other user kwargs
+            # set other user attributes
             for key, value in kwargs.items():
                 setattr(user, key, value)
 
